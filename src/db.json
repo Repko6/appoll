@@ -1,0 +1,42 @@
+{
+  "question_type": [
+    {
+      "id": "1",
+      "name": "Višestruki odabir",
+      "abrv": "visestruki"
+    },
+    {
+      "id": "2",
+      "name": "Jednostruki odabir",
+      "abrv": "jednostruki"
+    }
+  ],
+  "poll": [
+    {
+      "id": "1",
+      "name": "Nogomet"
+    },
+    {
+      "id": "2",
+      "name": "Monitor"
+    }
+  ],
+  "poll_questions": [
+    {
+      "id": "1",
+      "poll_id": "1",
+      "sort": "1",
+      "question": "Najbolji nogometaš ikad?",
+      "answer": ["Pele", "Maradona", "Messi", "C. Ronaldo", "Ronaldo", "Xavi"],
+      "question_type_id": "2"
+    },
+    {
+      "id": "2",
+      "poll_id": "1",
+      "sort": "2",
+      "question": "Najbolji nogometni klub ikad?",
+      "answer": ["B. Munchen", "Barcelona", "Man. United", "Real Madrid", "Milan", "Juventus"],
+      "question_type_id": "2"
+    }
+  ]
+}
