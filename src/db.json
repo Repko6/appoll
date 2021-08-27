@@ -1,24 +1,8 @@
 {
-  "question_type": [
-    {
-      "id": "1",
-      "name": "Višestruki odabir",
-      "abrv": "visestruki"
-    },
-    {
-      "id": "2",
-      "name": "Jednostruki odabir",
-      "abrv": "jednostruki"
-    }
-  ],
   "poll": [
     {
       "id": "1",
-      "name": "Nogomet"
-    },
-    {
-      "id": "2",
-      "name": "Monitor"
+      "name": "Upitnik o zadovoljstvu provedenom edukacijom"
     }
   ],
   "poll_questions": [
@@ -26,17 +10,61 @@
       "id": "1",
       "poll_id": "1",
       "sort": "1",
-      "question": "Najbolji nogometaš ikad?",
-      "answer": ["Pele", "Maradona", "Messi", "C. Ronaldo", "Ronaldo", "Xavi"],
-      "question_type_id": "2"
+      "question": "Zbog čega ste se odlučili pohađati ovu edukaciju?",
+      "answers": [
+        {
+          "id": 1,
+          "name": "Po preporuci",
+          "sort": 1
+        },
+        {
+          "id": 3,
+          "name": "Želim produbiti postojeće znanje o tematici",
+          "sort": 3
+        },
+        {
+          "id": 4,
+          "name": "Po zahtjevu poslodavca",
+          "sort": 4
+        },
+        {
+          "id": 5,
+          "name": "Mislim da će mi pomoći u razvoju karijere",
+          "sort": 5
+        },
+        {
+          "id": 10,
+          "sort": 10,
+          "name": "Drugo"
+        }
+      ],
+      "multi_answer": true,
+      "required_answer": false
     },
     {
       "id": "2",
       "poll_id": "1",
       "sort": "2",
-      "question": "Najbolji nogometni klub ikad?",
-      "answer": ["B. Munchen", "Barcelona", "Man. United", "Real Madrid", "Milan", "Juventus"],
-      "question_type_id": "2"
+      "question": "Najbolje predavanje?",
+      "answers": [
+        {
+          "name": "ReactJs",
+          "id": 1,
+          "sort": 1
+        },
+        {
+          "name": ".Net",
+          "id": 2,
+          "sort": 2
+        },
+        {
+          "name": "SQL",
+          "id": 3,
+          "sort": 3
+        }
+      ],
+      "multi_answer": true,
+      "required_answer": false
     }
   ]
 }
