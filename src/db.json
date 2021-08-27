@@ -1,15 +1,15 @@
 {
   "poll": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Upitnik o zadovoljstvu provedenom edukacijom"
     }
   ],
   "poll_questions": [
     {
-      "id": "1",
-      "poll_id": "1",
-      "sort": "1",
+      "id": 1,
+      "poll_id": 1,
+      "sort": 1,
       "question": "Zbog čega ste se odlučili pohađati ovu edukaciju?",
       "answers": [
         {
@@ -18,33 +18,28 @@
           "sort": 1
         },
         {
-          "id": 3,
+          "id": 2,
           "name": "Želim produbiti postojeće znanje o tematici",
+          "sort": 2
+        },
+        {
+          "id": 3,
+          "name": "Po zahtjevu poslodavca",
           "sort": 3
         },
         {
           "id": 4,
-          "name": "Po zahtjevu poslodavca",
-          "sort": 4
-        },
-        {
-          "id": 5,
           "name": "Mislim da će mi pomoći u razvoju karijere",
-          "sort": 5
-        },
-        {
-          "id": 10,
-          "sort": 10,
-          "name": "Drugo"
+          "sort": 4
         }
       ],
       "multi_answer": true,
       "required_answer": false
     },
     {
-      "id": "2",
-      "poll_id": "1",
-      "sort": "2",
+      "id": 2,
+      "poll_id": 1,
+      "sort": 2,
       "question": "Najbolje predavanje?",
       "answers": [
         {
@@ -65,6 +60,73 @@
       ],
       "multi_answer": true,
       "required_answer": false
+    },
+    {
+      "id": 3,
+      "poll_id": 1,
+      "sort": 3,
+      "question": "Pitanje 3",
+      "answers": []
+    },
+    {
+      "id": 4,
+      "poll_id": 1,
+      "sort": 4,
+      "question": "Pitanje 4",
+      "answers": [
+        {
+          "id": 1,
+          "sort": 1,
+          "name": "Odgovor 1"
+        },
+        {
+          "id": 2,
+          "sort": 2,
+          "name": "Odgovor 2"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "poll_id": 1,
+      "sort": 5,
+      "question": "Pitanje 5",
+      "answers": []
+    },
+    {
+      "id": 6,
+      "poll_id": 1,
+      "sort": 6,
+      "question": "Pitanje 6",
+      "answers": []
+    }
+  ],
+  "poll_score": [
+    {
+      "id": 1,
+      "poll_question_id": 1,
+      "scores": [
+        {
+          "answer_id": 1,
+          "value": 3
+        },
+        {
+          "answer_id": 2,
+          "value": 4
+        },
+        {
+          "answer_id": 3,
+          "value": 1
+        },
+        {
+          "answer_id": 4,
+          "value": 5
+        },
+        {
+          "answer_id": 5,
+          "value": 2
+        }
+      ]
     }
   ]
 }

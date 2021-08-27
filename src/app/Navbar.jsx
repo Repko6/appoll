@@ -7,7 +7,7 @@ export const Navbar = () => {
     <nav>
       <section>
         <div className="steps">
-            <Link to="/list">Lista anketa</Link>
+            <Link to="/list">Uređivanje</Link>
             <Link to="/score">Rezultati</Link>
         </div>
       </section>
