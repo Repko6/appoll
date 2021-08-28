@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { InputLabelComponent } from '../components/InputLabelComponent';
 import Toggle from 'react-toggle';
+import addIcon from '../icons/addIcon.png'
 
 export const PollEdit = ({ match }) => {
   const { pollId } = match.params;
@@ -195,24 +196,26 @@ export const PollEdit = ({ match }) => {
     <>
       {poll ?
         <>
-          <InputLabelComponent value={poll.name} changeEvent={changePollName} editMode={editMode} changeEditMode={changeEditMode} />
+          <section className="pollEditTitle">
+            <InputLabelComponent value={poll.name} changeEvent={changePollName} editMode={editMode} changeEditMode={changeEditMode} classNameLabel="pollEditTitleLabel" />
+          </section>
 
           {pollQuestions &&
-            <div>
+            <section className="pollEditQuestions">
               {pollQuestions.sort(function (a, b) { return a.sort - b.sort }).map(c => {
                 return (
                   <div key={`poll_question_${c.id}`}>
                     {c.sort === order &&
                       <div key={`poll_question_${c.id}`}>
-                        <div>
-                          {c.sort}. <InputLabelComponent value={c.question} changeEvent={(event, save) => changePollQuestionName(event, save, c.id)} editMode={editMode} changeEditMode={changeEditMode} />
+                        <div className="pollEditQuestions-question">
+                          <span className="pollEditQuestions-question-number">{c.sort}.</span> <InputLabelComponent value={c.question} changeEvent={(event, save) => changePollQuestionName(event, save, c.id)} editMode={editMode} changeEditMode={changeEditMode} />
                         </div>
-                        <div>
+                        <div className="pollEditQuestions-answers">
                           {c.multi_answer ?
                             <div>
                               {c.answers.sort(function (a, b) { return a.sort - b.sort }).map(d =>
-                                <div key={`answer_${d.id}`}>
-                                  <input type="checkbox" value={false} />
+                                <div key={`answer_${d.id}`} className="pollEditQuestions-answers-answer">
+                                  <input type="checkbox" value={false} className="pollEditQuestions-answers-answer-checkbox" />
                                   <InputLabelComponent value={d.name} changeEvent={(event, save) => changePollQuestionAnswer(event, save, c.id, d.id)} editMode={editMode} changeEditMode={changeEditMode} />
                                   {editMode && <button onClick={() => removeAnswer(c.id, d.id)} >❌</button>}
                                   {d.name === 'Drugo' && <div><textarea value='' onChange={() => { }} placeholder="Molimo upišite komentar." /></div>}
@@ -221,8 +224,8 @@ export const PollEdit = ({ match }) => {
                             :
                             <div>
                               {c.answers.sort(function (a, b) { return a.sort - b.sort }).map(d =>
-                                <div key={`answer_${d.id}`}>
-                                  <input type="radio" name={`radio_poll_question_${c.id}`} value={d.id} />
+                                <div key={`answer_${d.id}`} className="pollEditQuestions-answers-answer">
+                                  <input type="radio" name={`radio_poll_question_${c.id}`} value={d.id} className="pollEditQuestions-answers-answer-radio" />
                                   <InputLabelComponent value={d.name} changeEvent={(event, save) => changePollQuestionAnswer(event, save, c.id, d.id)} editMode={editMode} changeEditMode={changeEditMode} />
                                   {editMode && <button onClick={() => removeAnswer(c.id, d.id)} >❌</button>}
                                   {d.name === 'Drugo' && <div><textarea value='' onChange={() => { }} placeholder="Molimo upišite komentar." /></div>}
@@ -258,11 +261,12 @@ export const PollEdit = ({ match }) => {
                 )
               })}
 
-            </div>}
-          {!editMode && <button onClick={() => addQuestion(poll.id)} >Dodaj pitanje</button>}
+            </section>}
+
+          {!editMode && <button onClick={() => addQuestion(poll.id)} className="btn-icon" ><img src={addIcon} className="addIconButton"/>Dodaj pitanje</button>}
 
           {pollQuestions &&
-            <div>
+            <div className="pollEditNextPreviousQuestion">
               <button onClick={() => setOrder(order + 1)} disabled={!pollQuestions.some(c => c.sort == order + 1)}>Sljedeće pitanje</button>
               <button onClick={() => setOrder(order - 1)} disabled={!pollQuestions.some(c => c.sort == order - 1)}>Prethodno pitanje</button>
             </div>}

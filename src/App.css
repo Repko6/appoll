@@ -1,45 +1,153 @@
-.App {
-  text-align: left;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.header {
+  margin-top: 20px;
   display: flex;
+  flex: 1;
   flex-direction: column;
-  align-items: left;
-  justify-content: top;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.steps {
-  text-align: center;
+.header-top {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  padding-left: 12px;
+  border-left-style: solid;
+  border-left-width: 7px;
+  border-left-color: rgba(233, 216, 66);
   align-items: center;
+  font-size: 20px;
 }
+
+.header-bottom {
+  display: flex;
+  flex: 1;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.navbar{
+  display: flex;
+}
+
+.navbar-item-logo{
+  display: block;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  line-height: 50px;
+  -moz-border-radius: 30px; /* or 50% */
+  border-radius: 30px; /* or 50% */
+  background-color: rgba(233, 216, 66, 0.685);
+  margin: 0;
+}
+
+.navbar a {
+  color: rgba(233, 216, 66);
+  text-decoration: none;
+}
+
+.navbar-item-logo-img{
+  filter: invert(83%) sepia(48%) saturate(6491%) hue-rotate(1deg) brightness(107%) contrast(103%);
+}
+
+.content{
+  margin:50px;
+  padding: 20px;
+  box-shadow: 0 0 4px rgb(134, 134, 134);
+  text-align: center;
+}
+
+.pollEditTitle{
+  margin-bottom: 30px; 
+}
+
+.pollEditTitle span{
+  box-shadow: 0 0 3px rgb(134, 134, 134);
+  padding: 7px;
+  padding-left: 35px;
+  padding-right: 35px;
+  font-weight: bold;
+  color:rgba(233, 216, 66);
+}
+
+.pollEditQuestions{
+  text-align: left;
+  padding-left: 30px;
+}
+
+.pollEditQuestions-question{
+  font-weight: bold;
+}
+
+.pollEditQuestions-question-number{
+  color:rgba(233, 216, 66);
+}
+
+.pollEditQuestions-answers{
+  padding-top: 15px;
+  padding-left: 60px;
+}
+
+.pollEditQuestions-answers-answer{
+  margin-top: 5px
+}
+
+.pollEditQuestions-answers-answer-checkbox{
+  margin-right: 5px;
+}
+
+.pollEditQuestions-answers-answer-radio{
+  margin-right: 5px;
+}
+
+.btn-icon {
+  background-color: rgba(233, 216, 66, 0);
+  border: solid;
+  border-color: rgba(233, 216, 66);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn-icon:hover {
+  background-color: rgba(233, 216, 66);
+}
+
+.addIconButton {
+  filter: invert(83%) sepia(48%) saturate(6491%) hue-rotate(1deg) brightness(107%) contrast(103%);
+  margin-right: 7px;
+}
+
+.pollEditNextPreviousQuestion {
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------REACT TOGGLE------------------------------------------------ */
 
 .react-toggle {
   touch-action: pan-x;
