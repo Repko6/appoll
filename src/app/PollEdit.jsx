@@ -88,7 +88,7 @@ export const PollEdit = ({ match }) => {
   async function addQuestion(pollId) {
     const newId = pollQuestions.sort(function (a, b) { return a.id - b.id })[pollQuestions.length - 1].id + 1;
     const newSort = pollQuestions.filter(c => c.poll_id === pollId).sort(function (a, b) { return a.id - b.id })[pollQuestions.filter(c => c.poll_id === pollId).length - 1].sort + 1;
-    let data = [...pollQuestions, {id: newId, poll_id: pollId, sort: newSort, question: `Pitanje ${newSort}`, answers: []}]
+    let data = [...pollQuestions, { id: newId, poll_id: pollId, sort: newSort, question: `Pitanje ${newSort}`, answers: [] }]
 
     setPollQuestions(data);
 
@@ -230,7 +230,6 @@ export const PollEdit = ({ match }) => {
                             </div>
                           }
                         </div>
-                        {!editMode && <button onClick={() => addQuestion(c.poll_id)} >Dodaj pitanje</button>}
 
                         {editMode &&
                           <>
@@ -259,6 +258,11 @@ export const PollEdit = ({ match }) => {
                 )
               })}
 
+            </div>}
+          {!editMode && <button onClick={() => addQuestion(poll.id)} >Dodaj pitanje</button>}
+
+          {pollQuestions &&
+            <div>
               <button onClick={() => setOrder(order + 1)} disabled={!pollQuestions.some(c => c.sort == order + 1)}>Sljedeće pitanje</button>
               <button onClick={() => setOrder(order - 1)} disabled={!pollQuestions.some(c => c.sort == order - 1)}>Prethodno pitanje</button>
             </div>}
