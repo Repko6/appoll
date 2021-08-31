@@ -1,5 +1,6 @@
 .header {
   margin-top: 20px;
+  margin-left: 20px;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -25,8 +26,13 @@
   margin-top: 15px;
 }
 
+.header-bottom-breadcrumbs{
+  color: rgba(233, 216, 66);
+  margin-left: 5px;
+}
+
 .navbar{
-  display: flex;
+  margin-left: 20px;
 }
 
 .navbar-item-logo{
@@ -109,6 +115,7 @@
   font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  border-width: 2px;
 }
 
 /* Darker background on mouse-over */
@@ -119,20 +126,103 @@
 .addIconButton {
   filter: invert(83%) sepia(48%) saturate(6491%) hue-rotate(1deg) brightness(107%) contrast(103%);
   margin-right: 7px;
+  vertical-align:middle;
 }
 
 .pollEditNextPreviousQuestion {
   margin-top: 30px;
 }
 
+input[type=text] {
+  width: 50%;
+  box-sizing: border-box;
+  border-color: #0000ff30;
+  border-width: 1px;
+  border-radius: 3px;
+  padding: 7px;
+}
 
+.classNameInputPollEdit{
+  font-weight: bold;
+  padding-left: 35px;
+  padding-right: 35px;
+}
 
+button:focus {
+  outline:0;
+}
 
+.removeIconImg{
+  vertical-align:middle;
+}
 
+.classNameInput{
+  border: none;
+  background-color: #f0efef;
+  color: rgb(0, 0, 0);
+  padding-left: 0;
+}
 
+.classNameInput:focus{
+  outline: 0;
+}
 
+.btn-paging {
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
 
+.margin-right{
+  margin-right: 10px;
+}
 
+.textareaComment{
+  margin: 10px;
+  margin-left: 23px;
+  width: 50%;
+}
+
+.pollQuestionScoreTitle{
+   color: orange;
+   margin-bottom: 30px;
+   font-size: 20px;
+}
+
+.pollQuestionScoreName{
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.pollQuestionScoreChart{
+  margin-left: 100px;
+}
+
+.tableScore{
+  margin-left: 100px;
+  text-align: left;
+}
+
+.tableScore-heading{
+  background-color: rgb(241, 240, 240);
+}
+
+.tableScore-rows{
+  border-bottom: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.poll_question {
+  margin-bottom: 50px;
+}
+
+.pointer{
+  cursor: pointer; 
+}
 
 
 

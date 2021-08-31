@@ -1,130 +1,119 @@
 {
   "poll": [
     {
-      "id": 1,
-      "name": "Upitnik o zadovoljstvu provedenom edukacijom"
+      "id": "P7_j_9mwWQixC2unPeOkj",
+      "name": "Upitnik o zadovoljstvu provedenom anketom"
     }
   ],
   "poll_questions": [
     {
-      "id": 1,
-      "poll_id": 1,
+      "id": "V8AWEeDGVpp7uSXTGFud1",
+      "poll_id": "P7_j_9mwWQixC2unPeOkj",
       "sort": 1,
       "question": "Zbog čega ste se odlučili pohađati ovu edukaciju?",
       "answers": [
         {
-          "id": 1,
-          "name": "Po preporuci",
-          "sort": 1
-        },
-        {
-          "id": 2,
-          "name": "Želim produbiti postojeće znanje o tematici",
-          "sort": 2
-        },
-        {
-          "id": 3,
-          "name": "Po zahtjevu poslodavca",
-          "sort": 3
-        },
-        {
-          "id": 4,
-          "name": "Mislim da će mi pomoći u razvoju karijere",
-          "sort": 4
-        }
-      ],
-      "multi_answer": true,
-      "required_answer": false
-    },
-    {
-      "id": 2,
-      "poll_id": 1,
-      "sort": 2,
-      "question": "Najbolje predavanje?",
-      "answers": [
-        {
-          "name": "ReactJs",
-          "id": 1,
-          "sort": 1
-        },
-        {
-          "name": ".Net",
-          "id": 2,
-          "sort": 2
-        },
-        {
-          "name": "SQL",
-          "id": 3,
-          "sort": 3
-        }
-      ],
-      "multi_answer": true,
-      "required_answer": false
-    },
-    {
-      "id": 3,
-      "poll_id": 1,
-      "sort": 3,
-      "question": "Pitanje 3",
-      "answers": []
-    },
-    {
-      "id": 4,
-      "poll_id": 1,
-      "sort": 4,
-      "question": "Pitanje 4",
-      "answers": [
-        {
-          "id": 1,
+          "id": "GiLmcQhtbkngHNJ28pbV5",
           "sort": 1,
-          "name": "Odgovor 1"
+          "name": "Po preporuci"
         },
         {
-          "id": 2,
+          "id": "XwC57fI8-0wuycX6pHJ9S",
           "sort": 2,
-          "name": "Odgovor 2"
+          "name": "Svidio mi se sadržaj"
+        },
+        {
+          "id": "DuWXs4Ut7zMSrfxqgYO9k",
+          "sort": 3,
+          "name": "Želim produbiti postojeće znanje o tematici"
+        },
+        {
+          "id": "juXVK5y3me6yTzmlf7reQ",
+          "sort": 4,
+          "name": "Po zahtjevu poslodavca"
+        },
+        {
+          "id": "ieCW5RdaBVXZjS1s23bYB",
+          "sort": 5,
+          "name": "Mislim da će mi pomoći u razvoju karijere"
+        },
+        {
+          "id": "8GG7-90tI54CmnfgXhHtX",
+          "sort": 6,
+          "name": "Drugi razlozi"
         }
       ]
     },
     {
-      "id": 5,
-      "poll_id": 1,
-      "sort": 5,
-      "question": "Pitanje 5",
-      "answers": []
-    },
-    {
-      "id": 6,
-      "poll_id": 1,
-      "sort": 6,
-      "question": "Pitanje 6",
-      "answers": []
+      "id": "1GFlLuhJYKTd0fTyAZk4J",
+      "poll_id": "P7_j_9mwWQixC2unPeOkj",
+      "sort": 2,
+      "question": "Koje je najbolje predavanje?",
+      "answers": [
+        {
+          "id": "dpP6xyojpRHqjjADRND3p",
+          "sort": 1,
+          "name": "ReactJs"
+        },
+        {
+          "id": "r2jSwtjvBjdSJ8xC5UjaO",
+          "sort": 2,
+          "name": ".Net"
+        },
+        {
+          "id": "zVaxIqr3Bbkcn1qoQqAk7",
+          "sort": 3,
+          "name": "SQL"
+        }
+      ]
     }
   ],
   "poll_score": [
     {
-      "id": 1,
-      "poll_question_id": 1,
+      "id": "WCLvANI11WCMyvjbFgJjg",
+      "poll_question_id": "V8AWEeDGVpp7uSXTGFud1",
       "scores": [
         {
-          "answer_id": 1,
+          "answer_id": "GiLmcQhtbkngHNJ28pbV5",
           "value": 3
         },
         {
-          "answer_id": 2,
+          "answer_id": "XwC57fI8-0wuycX6pHJ9S",
           "value": 4
         },
         {
-          "answer_id": 3,
+          "answer_id": "DuWXs4Ut7zMSrfxqgYO9k",
           "value": 1
         },
         {
-          "answer_id": 4,
+          "answer_id": "juXVK5y3me6yTzmlf7reQ",
           "value": 5
         },
         {
-          "answer_id": 5,
+          "answer_id": "ieCW5RdaBVXZjS1s23bYB",
           "value": 2
+        },
+        {
+          "answer_id": "8GG7-90tI54CmnfgXhHtX",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "-RHd0cb76PuFCKTJ0m4SN",
+      "poll_question_id": "1GFlLuhJYKTd0fTyAZk4J",
+      "scores": [
+        {
+          "answer_id": "zVaxIqr3Bbkcn1qoQqAk7",
+          "value": 12
+        },
+        {
+          "answer_id": "r2jSwtjvBjdSJ8xC5UjaO",
+          "value": 15
+        },
+        {
+          "answer_id": "dpP6xyojpRHqjjADRND3p",
+          "value": 5
         }
       ]
     }

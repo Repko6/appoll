@@ -47,44 +47,45 @@ export const PollScore = () => {
                     {polls.map(c => {
                         return (
                             <div key={`poll_score_${c.id}`}>
-                                <div>{c.name}</div>
+                                <div className="pollQuestionScoreTitle">{c.name}</div>
                                 {pollQuestions &&
                                     <div>
-                                        {pollQuestions.sort(function (a, b) { return a.sort - b.sort }).map(d => {
+                                        {pollQuestions.filter(x => x.poll_id === c.id).sort(function (a, b) { return a.sort - b.sort }).map(d => {
                                             const model = []
 
                                             d.answers.map(f => {
                                                 let temp = pollScore.find(s => s.poll_question_id === d.id);
                                                 if (temp) {
+                                                    let tempAnswer = temp.scores.find(t => t.answer_id === f.id);
                                                     model.push({
                                                         category: f.name,
-                                                        data: (temp.scores.find(s => s.answer_id === f.id).value / temp.scores.map(c => c.value).reduce((a, b) => a + b, 0) * 100).toFixed(2)
+                                                        data: tempAnswer ? (tempAnswer.value / temp.scores.map(c => c.value).reduce((a, b) => a + b, 0) * 100).toFixed(2) : 0
                                                     })
                                                 }
                                             })
 
                                             return (
-                                                <div key={`poll_question_score_${d.id}`}>
-                                                    <div>
+                                                <div key={`poll_question_score_${d.id}`} className="poll_question">
+                                                    <div className="pollQuestionScoreName">
                                                         {d.sort}. {d.question}
                                                     </div>
 
-                                                    <ChartComponent model={model} />
+                                                    <div className="pollQuestionScoreChart">
+                                                        <ChartComponent model={model} />
+                                                    </div>
 
-                                                    <table>
-                                                        <tr>
-                                                            <th>OPCIJE</th>
-                                                            <th>ODGOVORI</th>
-                                                            <th></th>
-                                                        </tr>
+                                                    <table className="tableScore">
+                                                        <th className="tableScore-heading">OPCIJE</th>
+                                                        <th className="tableScore-heading">ODGOVORI</th>
+                                                        <th className="tableScore-heading"></th>
                                                         {d.answers.sort(function (a, b) { return a.sort - b.sort }).map(x => {
                                                             let temp = pollScore.find(s => s.poll_question_id === d.id);
 
                                                             return (
-                                                                <tr key={`score_poll_question_${d.id}_${x.id}`}>
+                                                                <tr key={`score_poll_question_${d.id}_${x.id}`} className="tableScore-rows">
                                                                     <td>{x.name}</td>
-                                                                    <td>{temp ? `${(temp.scores.find(s => s.answer_id === x.id).value / temp.scores.map(c => c.value).reduce((a, b) => a + b, 0) * 100).toFixed(2)}%` : '0%'}</td>
-                                                                    <td>{temp ? temp.scores.find(s => s.answer_id === x.id).value : 0}</td>
+                                                                    <td>{temp && temp.scores.find(s => s.answer_id === x.id) ? `${(temp.scores.find(s => s.answer_id === x.id).value / temp.scores.map(c => c.value).reduce((a, b) => a + b, 0) * 100).toFixed(2)}%` : '0%'}</td>
+                                                                    <td>{temp && temp.scores.find(s => s.answer_id === x.id) ? temp.scores.find(s => s.answer_id === x.id).value : 0}</td>
                                                                 </tr>
                                                             )
                                                         })}
